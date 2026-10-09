@@ -1,0 +1,41 @@
+#! /home/jacob/Desktop/comparch/oss-cad-suite-linux-x64-20260921/oss-cad-suite/bin/vvp
+:ivl_version "14.0 (devel)" "(s20260301-476-g1a23d1ffd-dirty)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision - 12;
+:vpi_module "/home/jacob/Desktop/comparch/oss-cad-suite-linux-x64-20260921/oss-cad-suite/lib/ivl/system.vpi";
+:vpi_module "/home/jacob/Desktop/comparch/oss-cad-suite-linux-x64-20260921/oss-cad-suite/lib/ivl/vhdl_sys.vpi";
+:vpi_module "/home/jacob/Desktop/comparch/oss-cad-suite-linux-x64-20260921/oss-cad-suite/lib/ivl/vhdl_textio.vpi";
+:vpi_module "/home/jacob/Desktop/comparch/oss-cad-suite-linux-x64-20260921/oss-cad-suite/lib/ivl/v2005_math.vpi";
+:vpi_module "/home/jacob/Desktop/comparch/oss-cad-suite-linux-x64-20260921/oss-cad-suite/lib/ivl/va_math.vpi";
+S_0x555581671010 .scope module, "full_adder" "full_adder" 2 2;
+ .timescale -9 -12;
+    .port_info 0 /INPUT 1 "a";
+    .port_info 1 /INPUT 1 "b";
+    .port_info 2 /INPUT 1 "c_in";
+    .port_info 3 /OUTPUT 1 "sum";
+    .port_info 4 /OUTPUT 1 "carry_out";
+o0x782beff81108 .functor BUFZ 1, c4<z>; HiZ drive
+o0x782beff81138 .functor BUFZ 1, c4<z>; HiZ drive
+L_0x555581670e20 .functor XOR 1, o0x782beff81108, o0x782beff81138, C4<0>, C4<0>;
+o0x782beff81168 .functor BUFZ 1, c4<z>; HiZ drive
+L_0x5555816a70d0 .functor XOR 1, L_0x555581670e20, o0x782beff81168, C4<0>, C4<0>;
+L_0x5555816a7170 .functor AND 1, o0x782beff81108, o0x782beff81138, C4<1>, C4<1>;
+L_0x5555816a72b0 .functor AND 1, o0x782beff81108, o0x782beff81168, C4<1>, C4<1>;
+L_0x5555816a73a0 .functor OR 1, L_0x5555816a7170, L_0x5555816a72b0, C4<0>, C4<0>;
+L_0x5555816a74b0 .functor AND 1, o0x782beff81168, o0x782beff81138, C4<1>, C4<1>;
+L_0x5555816a7560 .functor OR 1, L_0x5555816a73a0, L_0x5555816a74b0, C4<0>, C4<0>;
+v0x555581671250_0 .net *"_ivl_0", 0 0, L_0x555581670e20;  1 drivers
+v0x5555816a6870_0 .net *"_ivl_10", 0 0, L_0x5555816a74b0;  1 drivers
+v0x5555816a6950_0 .net *"_ivl_4", 0 0, L_0x5555816a7170;  1 drivers
+v0x5555816a6a10_0 .net *"_ivl_6", 0 0, L_0x5555816a72b0;  1 drivers
+v0x5555816a6af0_0 .net *"_ivl_8", 0 0, L_0x5555816a73a0;  1 drivers
+v0x5555816a6c20_0 .net "a", 0 0, o0x782beff81108;  0 drivers
+v0x5555816a6ce0_0 .net "b", 0 0, o0x782beff81138;  0 drivers
+v0x5555816a6da0_0 .net "c_in", 0 0, o0x782beff81168;  0 drivers
+v0x5555816a6e60_0 .net "carry_out", 0 0, L_0x5555816a7560;  1 drivers
+v0x5555816a6f20_0 .net "sum", 0 0, L_0x5555816a70d0;  1 drivers
+# The file index is used to find the file name in the following table.
+:file_names 3;
+    "N/A";
+    "<interactive>";
+    "full_adder.v";

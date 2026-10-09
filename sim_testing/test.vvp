@@ -1,0 +1,22 @@
+#! /home/jacob/Desktop/comparch/oss-cad-suite-linux-x64-20260921/oss-cad-suite/bin/vvp
+:ivl_version "14.0 (devel)" "(s20260301-476-g1a23d1ffd-dirty)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "/home/jacob/Desktop/comparch/oss-cad-suite-linux-x64-20260921/oss-cad-suite/lib/ivl/system.vpi";
+:vpi_module "/home/jacob/Desktop/comparch/oss-cad-suite-linux-x64-20260921/oss-cad-suite/lib/ivl/vhdl_sys.vpi";
+:vpi_module "/home/jacob/Desktop/comparch/oss-cad-suite-linux-x64-20260921/oss-cad-suite/lib/ivl/vhdl_textio.vpi";
+:vpi_module "/home/jacob/Desktop/comparch/oss-cad-suite-linux-x64-20260921/oss-cad-suite/lib/ivl/v2005_math.vpi";
+:vpi_module "/home/jacob/Desktop/comparch/oss-cad-suite-linux-x64-20260921/oss-cad-suite/lib/ivl/va_math.vpi";
+S_0x5555861e64a0 .scope module, "hello" "hello" 2 1;
+ .timescale 0 0;
+    .scope S_0x5555861e64a0;
+T_0 ;
+    %vpi_call 2 4 "$display", "Hello, World" {0 0 0};
+    %vpi_call 2 5 "$finish" {0 0 0};
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 3;
+    "N/A";
+    "<interactive>";
+    "test.v";
