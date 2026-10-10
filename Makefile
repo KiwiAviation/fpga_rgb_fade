@@ -11,3 +11,8 @@ prog: #for sram
 
 clean:
 	rm -rf $(filename).blif $(filename).asc $(filename).json $(filename).bin
+
+sim:
+	iverilog -g2012 -o $(filename)_tb.vvp $(filename)_tb.sv
+	vvp $(filename)_tb.vvp
+	gtkwave $(filename).vcd
