@@ -1,4 +1,4 @@
-filename = top
+filename = rgb_fade
 pcf_file = iceBlinkPico.pcf
 
 build:
